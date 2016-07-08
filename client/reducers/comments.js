@@ -21,6 +21,7 @@ function postComments(state = [], action) {
 }
 
 export default function comments(state = [], action) {
+  console.log("STATE INSIDE COMMENTS => ", state)
   if(typeof action.postId !== 'undefined'){
     console.log([action.postId], state[action.postId], action, state)
     return{

@@ -4,6 +4,7 @@
 //2. copy of current state
 
 export default function posts(state = [], action) {
+  console.log("STATE INSIDE POSTS => ", state)
   switch(action.type){
     case 'INCREMENT_LIKES':
       console.log("Incrementing Likes!")

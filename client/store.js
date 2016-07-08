@@ -8,13 +8,15 @@ import rootReducer from './reducers/index'
 import comments from './data/comments'
 import posts from './data/posts'
 
-//crate an object for the default data
+//create an object for the default (initial) data
 const defaultState = {
   posts,
   comments
 }
 
-const store = createStore(rootReducer, defaultState)
+const store = createStore(rootReducer, defaultState, 
+      window.devToolsExtension && window.devToolsExtension()
+    )
 
 export const history = syncHistoryWithStore(browserHistory, store)
 
